@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+    <div class="track">
+            <a href="\homePage">Home</a>
+            <!--form having checkbox to track day by day done,not-done,none-->
+            <form action="/save-task/?id=<%=trackHabbit._id%>" method="POST">
+            <center>
+            <table CELLSPACING=45>
+                <tr>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday </th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th>Saturday </th>
+                    <th> Sunday</th>
+                </tr>
+                <tr>
+                    <td>
+                        <select name="day1">
+                            <option value="" selected disabled hidden>Select category</option>
+                            <option value="done">Done</option>
+                            <option value="not-done">Not Done</option>
+                            <option value="none">None</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="day2">
+                            <option value="" selected disabled hidden>Select category</option>
+                            <option value="done">Done</option>
+                            <option value="not-done">Not Done</option>
+                            <option value="none">None</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="day3">
+                            <option value="" selected disabled hidden>Select category</option>
+                            <option value="done">Done</option>
+                            <option value="not-done">Not Done</option>
+                            <option value="none">None</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="day4">
+                            <option value="" selected disabled hidden>Select category</option>
+                            <option value="done">Done</option>
+                            <option value="not-done">Not Done</option>
+                            <option value="none">None</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="day5">
+                            <option value="" selected disabled hidden>Select category</option>
+                            <option value="done">Done</option>
+                            <option value="not-done">Not Done</option>
+                            <option value="none">None</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="day6">
+                            <option value="" selected disabled hidden>Select category</option>
+                            <option value="done">Done</option>
+                            <option value="not-done">Not Done</option>
+                            <option value="none">None</option>
+                        </select>
+                    </td>
+                    <td>
+                        <select name="day7">
+                            <option value="" selected disabled hidden>Select category</option>
+                            <option value="done">Done</option>
+                            <option value="not-done">Not Done</option>
+                            <option value="none">None</option>
+                        </select>
+                    </td>
+                    </tr>
+
+                    <!--displaying icons corresponding to user selection -->
+                    <tr class="icons">
+                            <%for(let i of details){
+                                if(i.habbit.equals(trackHabbit._id))
+                                {%>
+                                    <td>
+                                        <%if(i.day1=="done"){%>
+                                            <i class="far fa-check-circle"></i>
+                                        <%}
+
+                                        else if(i.day1=="not-done"){%>
+                                            <i class="far fa-times-circle"></i>
+                                        <%}
+
+                                        else if(i.day1=="none"){%>
+                                            <i class="fas fa-minus"></i>
+                                        <%}%>
+                                    </td>
+
+                                    <td>
+                                        <%if(i.day2=="done"){%>
+                                            <i class="far fa-check-circle"></i>
+                                        <%}
+                
+                                        else if(i.day2=="not-done"){%>
+                                            <i class="far fa-times-circle"></i>
+                                        <%}
+                
+                                        else if(i.day2=="none"){%>
+                                            <i class="fas fa-minus"></i>
+                                        <%}%>
+                                    </td>
+
+                                    <td>
+                                        <%if(i.day3=="done"){%>
+                                            <i class="far fa-check-circle"></i>
+                                        <%}
+                
+                                        else if(i.day3=="not-done"){%>
+                                            <i class="far fa-times-circle"></i>
+                                        <%}
+                
+                                        else if(i.day3=="none"){%>
+                                            <i class="fas fa-minus"></i>
+                                        <%}%>
+                                    </td>
+
+                                    <td>
+                                        <%if(i.day4=="done"){%>
+                                            <i class="far fa-check-circle"></i>
+                                        <%}
+                
+                                        else if(i.day4=="not-done"){%>
+                                            <i class="far fa-times-circle"></i>
+                                        <%}
+                
+                                        else if(i.day4=="none"){%>
+                                            <i class="fas fa-minus"></i>
+                                        <%}%>
+                                    </td>
+
+                                    <td>
+                                        <%if(i.day5=="done"){%>
+                                            <i class="far fa-check-circle"></i>
+                                        <%}
+                
+                                        else if(i.day5=="not-done"){%>
+                                            <i class="far fa-times-circle"></i>
+                                        <%}
+                
+                                        else if(i.day5=="none"){%>
+                                            <i class="fas fa-minus"></i>
+                                        <%}%>
+                                    </td>
+
+                                    <td>
+                                        <%if(i.day6=="done"){%>
+                                            <i class="far fa-check-circle"></i>
+                                        <%}
+                
+                                        else if(i.day6=="not-done"){%>
+                                            <i class="far fa-times-circle"></i>
+                                        <%}
+                
+                                        else if(i.day6=="none"){%>
+                                            <i class="fas fa-minus"></i>
+                                        <%}%>
+                                    </td>
+
+                                    <td>
+                                        <%if(i.day7=="done"){%>
+                                            <i class="far fa-check-circle"></i>
+                                        <%}
+                
+                                        else if(i.day7=="not-done"){%>
+                                            <i class="far fa-times-circle"></i>
+                                        <%}
+                
+                                        else if(i.day7=="none"){%>
+                                            <i class="fas fa-minus"></i>
+                                        <%}%>
+                                    </td>
+                                <%}}%>
+                        </td>
+                    </tr>
+                </table>
+            <!--save button to save user selections-->
+            <button id="track-btn" type="submit">Save</button>
+        </center>
+        </form>
+    </div>
+</body>
+</html>

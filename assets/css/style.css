@@ -1,0 +1,206 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+/**************properties for home.ejs****************/
+#container{
+    height: 100vh;
+    width: 100%;
+     background-image: url('/images/climb3.jpg'); 
+     background-repeat: round;
+} 
+
+.heading{
+    font-size: xx-large;
+    position: relative;
+    top: 5%;
+    text-align: center;
+    letter-spacing: 20px;
+}
+
+.main{
+    height: 76vh;
+    width: 90vh;
+    box-shadow: 0 8px 6px 1px darkslategrey;
+    position: relative;
+    left: 29%;
+    top: 6%;
+    text-align: center;
+}
+
+form{
+    height: 16vh;
+}
+
+#main-input{
+    width: 41%;
+    padding-left: 21%;
+    height: 31%;
+    font-size: larger;
+    margin-top: 6%;
+    font-weight: inherit;
+}
+
+#main-input::placeholder{
+    color: palevioletred;
+    font-weight: bolder;
+    font-size:large;
+}
+
+#main-btn{
+    width: 25%;
+    height: 51%;
+    font-weight: bolder;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: #055b94e3;
+    padding: 4px;
+    border-radius: 5px;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+
+#main-btn:hover{
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+
+.main li{
+    margin-left: 9%;
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    margin-right: 39%;
+}
+
+#habbit-detail{
+    display: flex;
+    font-size: xxx-large;
+    margin-top: 5px;
+    justify-content: space-between;
+}
+
+.fa-calendar-alt{
+    color: darkgreen;
+}
+
+.fa-trash-alt{
+    color: black;
+}
+
+#habbit-detail span{
+    color:darkslategrey;
+    font-weight: bolder;
+}
+
+/*****************************Below properties are for trackHabbit.ejs***************************************/
+.track{
+    height: 100vh;
+    width: 100%;
+    background-image: url('/images/mountain4.jpg'); 
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+}
+
+table{
+    position: absolute;
+    font-size: x-large;
+    /* position: relative; */
+    top: 18%;
+    left: 7%;
+}
+
+#track-btn, .track a{
+    font-weight: bolder;
+    padding: 20px;
+    margin-top: 30%;
+    width: 10%;
+    color: #fff !important;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    background: #055b94e3;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+    text-decoration: none;
+}
+
+#track-btn:hover{
+    background: #434343;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
+}
+
+.track a{
+    width: 6%;
+    padding: 20px;
+    margin-top: 1%;
+    background-color: cadetblue;
+}
+
+table .far{
+    font-size: xxx-large;
+}
+
+.fa-check-circle{
+    color:rgb(12, 207, 159);
+}
+
+.fa-times-circle{
+    color: tomato;
+}
+
+.fa-minus{
+    color: slategray;
+}
+
+table th{
+    color: darkred;
+    font-size: xx-large;
+    font-style: italic;
+    letter-spacing: 2px;
+}
+
+.icons i{
+    font-size: 320%;
+    margin-left: 10%;
+}
+
+select {
+  border-radius: 4px;
+  font-size: medium;
+  cursor: pointer;
+  background-color: #2bafc0;
+  color: white;
+  padding: 8px;
+  border: none;
+}
+
+select option{
+    font-size: small;
+}
+
+
+.habbit-track{
+    position:absolute;
+    left:45%;
+}
+
+.fa-trash-alt{
+    position:absolute;
+    left:70%;
+}
