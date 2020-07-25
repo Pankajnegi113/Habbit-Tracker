@@ -53,6 +53,14 @@ app.get('/deleteHabbit/',function(req,res){
             console.log('Error in deleting habbit');
             return;
         }
+        TrackHabbit.deleteMany({habbit:req.query.id},function(err)
+        {
+            if(err)
+             {
+                console.log('Error in deleting habbit');
+                return;
+            }
+        })
         return res.redirect('back');
     })
 })
